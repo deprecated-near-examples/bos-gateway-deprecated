@@ -11,14 +11,16 @@ const MainNavigationMenu = (props) => {
     <NavigationMenu.Root className="NavigationMenuRoot">
       <NavigationMenu.List className="NavigationMenuList">
         {props.signedIn && (
-          <NavigationMenu.Item>
-            <NavigationMenu.Link
-              className="NavigationMenuLink"
-              onClick={() => history.push("/")}
-            >
-              Home
-            </NavigationMenu.Link>
-          </NavigationMenu.Item>
+          <>
+            <NavigationMenu.Item>
+              <NavigationMenu.Link
+                className="NavigationMenuLink"
+                onClick={() => history.push("/")}
+              >
+                Home
+              </NavigationMenu.Link>
+            </NavigationMenu.Item>
+          </>
         )}
 
         <NavigationMenu.Indicator className="NavigationMenuIndicator">

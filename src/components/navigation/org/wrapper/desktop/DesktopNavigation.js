@@ -147,22 +147,6 @@ const TypeAheadDropdownContainer = styled.div`
 const DesktopNavigation = (props) => {
   const [scrolled, setScrolled] = useState(false);
   const history = useHistory();
-  const [searchTerm, setSearchTerm] = useState("");
-  const searchRef = useRef(null);
-  const [searchIsFocused, _setSearchIsFocused] = useState(false);
-  const showTypeAheadDropdown = searchIsFocused && !!searchTerm;
-  let searchFocusTimeout = useRef();
-
-  const setSearchIsFocused = (isFocused) => {
-    if (isFocused) {
-      _setSearchIsFocused(true);
-      clearTimeout(searchFocusTimeout.current);
-    } else {
-      searchFocusTimeout.current = setTimeout(() => {
-        _setSearchIsFocused(false);
-      }, 100);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {

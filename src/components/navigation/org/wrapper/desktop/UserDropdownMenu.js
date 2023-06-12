@@ -33,7 +33,6 @@ const StyledDropdown = styled.div`
   .profile-info {
     margin: 0 8px;
     line-height: normal;
-    max-width: 110px;
     font-size: 1rem;
 
     .profile-name,
@@ -43,10 +42,10 @@ const StyledDropdown = styled.div`
     }
 
     .profile-name {
-      color: white;
+      color: #333;
     }
     .profile-username {
-      color: #333;
+      color: #666;
     }
   }
 `;
